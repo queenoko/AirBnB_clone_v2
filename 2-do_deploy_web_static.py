@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Deploy archive to web servers
+This script will deploy archive to the web servers
 """
 from fabric.api import *
 from fabric.decorators import task
@@ -8,13 +8,13 @@ import os
 from datetime import datetime
 
 
-#env.hosts = ['100.25.147.62', '54.174.169.156']
-env.hosts= ["c8f1563fc557.49c6c158.alx-cod.online"]
+#env.hosts = ['34.207.156.213', '54.237.20.30']
+env.hosts= ["964ffa937b2a.d1ee86f7.alx-cod.online"]
 
 
 @task
 def do_deploy(archive_path):
-    """Deploy an archived to servers"""
+    """This code deploy an archived to servers"""
     try:
         if os.path.exists(archive_path):
             file_name = archive_path.split(".")[0]
